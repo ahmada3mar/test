@@ -1,0 +1,133 @@
+<!DOCTYPE  html>
+<html  lang="en">
+
+<head >
+    <link  id="pagestyle" rel="stylesheet" href="style.css">
+<script defer>
+    function checktheme(){
+
+    (localStorage.getItem("theme"))? document.getElementById('pagestyle').setAttribute('href', localStorage.getItem("theme")) : document.getElementById('pagestyle').setAttribute('href', "style.css");
+}
+
+checktheme();
+</script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Main Page</title>
+
+
+
+
+</head>
+
+<body  id="body">
+
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="menu">
+                <a  href="">Home</a>
+                <a href="">To-Do</a>
+                <a href="">Calcolater</a>
+
+                <div class="dropdown">
+                    <a class="dropbtn">Select Theme </a>
+
+
+                    <div class="dropdown-content">
+                        <a onclick="switchStyle('style.css')">deffult</a>
+                        <a onclick="switchStyle('style2.css')">Light</a>
+                        <a onclick="switchStyle('style3.css')">Dark</a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="nav">
+        <ul>
+            <li class="here"><a  href="">Home</a></li>
+            <li><a href="">To-Do</a></li>
+            <li><a href="">Calcolater</a></li>
+            <li class="theme">
+                <div class="dropdown">
+                    <a class="dropbtn">Select Theme </a>
+
+
+                    <div class="dropdown-content">
+                        <a onclick="switchStyle('style.css')">deffult</a>
+                        <a onclick="switchStyle('style2.css')">Light</a>
+                        <a onclick="switchStyle('style3.css')">Dark</a>
+                    </div>
+                </div>
+            </li>
+            <li class="fontUP"><a onclick="fontup('+')">A+</a></li>
+            <li class="fontUP"><a onclick="fontup('-')">A-</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="container">
+        <form action="">
+            <h2>Personal Info</h2>
+            <div class="sub">
+
+                <input onchange="check()" onkeyup="check()" id="Name" placeholder="Full Name" required type="text">
+                <input onchange="check()" onkeyup="check()" id="E-mail" placeholder="E-mail address" required
+                    type="email" name="" id="">
+                <input onchange="check()" onkeyup="check()" id="DOB" placeholder="Date of Birth" required type="date"
+                    name="" id="">
+                <input onchange="check()" onkeyup="check()" id="Mobile" placeholder="Mobile" required type="tel" name=""
+                    id="">
+                <input onchange="check()" onkeyup="check()" id="Password" placeholder="Password" required
+                    type="password" name="" id="">
+                <select id="select">
+                    <option selected hidden>Select Storge location.</option>
+                    <option value="Local Storge">Local Storge</option>
+                    <option value="Session Storge">Session Storge</option>
+
+                </select>
+                <div class="agreement">
+
+                    <input id="cheek" onclick="check()" type="checkbox"> I agree to the <a href="#">Terms and
+                        Conditions</a>
+                    and <a href="#">Privacey Policy</a>
+                </div>
+
+                <div class="buttoms">
+
+                    <input onclick="myfunction()" class="dis" id="submit" type="submit" value="submit">
+                    <input onclick="clearData()" class="dis" id="clear" type="reset" value="Clear">
+
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+    <footer>
+        <h2>Copyright OCA Jordan</h2>
+    </footer>
+
+    <script   src="script.js"></script>
+
+</body>
+
+</html>
